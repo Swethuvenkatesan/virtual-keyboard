@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5501/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, 
+
+        initial-scale=1.0">
+
+    <link rel="stylesheet" href="./Virtual Keyboard website_files/style.css">
+
+    <link href="./Virtual Keyboard website_files/icon" rel="stylesheet">
+
+    <title>
+
+        Virtual Keyboard
+
+    </title>
+
+</head>
+ 
+
+<body>
+
+    <textarea name="anytext" class="text-area use-keyboard-input" placeholder="Click me!" style="width: 487px; height: 227px;">
+    </textarea>
+
+    <script src="./Virtual Keyboard website_files/javascript.js.download"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+ 
+
+<div class="keyboard"><div class="keyboard__keys"><button type="button" class="keyboard__key undefined">1</button><button type="button" class="keyboard__key undefined">2</button><button type="button" class="keyboard__key undefined">3</button><button type="button" class="keyboard__key undefined">4</button><button type="button" class="keyboard__key undefined">5</button><button type="button" class="keyboard__key undefined">6</button><button type="button" class="keyboard__key undefined">7</button><button type="button" class="keyboard__key undefined">8</button><button type="button" class="keyboard__key undefined">9</button><button type="button" class="keyboard__key undefined">0</button><button type="button" class="keyboard__key keyboard__key--wide undefined"><span class="material-icons">backspace</span></button><br><button type="button" class="keyboard__key undefined">q</button><button type="button" class="keyboard__key undefined">w</button><button type="button" class="keyboard__key undefined">e</button><button type="button" class="keyboard__key undefined">r</button><button type="button" class="keyboard__key undefined">t</button><button type="button" class="keyboard__key undefined">y</button><button type="button" class="keyboard__key undefined">u</button><button type="button" class="keyboard__key undefined">i</button><button type="button" class="keyboard__key undefined">o</button><button type="button" class="keyboard__key undefined">p</button><br><button type="button" class="keyboard__key keyboard__key--activatable keyboard__key--wide"><span class="material-icons">keyboard_capslock</span></button><button type="button" class="keyboard__key undefined">a</button><button type="button" class="keyboard__key undefined">s</button><button type="button" class="keyboard__key undefined">d</button><button type="button" class="keyboard__key undefined">f</button><button type="button" class="keyboard__key undefined">g</button><button type="button" class="keyboard__key undefined">h</button><button type="button" class="keyboard__key undefined">j</button><button type="button" class="keyboard__key undefined">k</button><button type="button" class="keyboard__key undefined">l</button><button type="button" class="keyboard__key keyboard__key--wide undefined"><span class="material-icons">keyboard_return</span></button><br><button type="button" class="keyboard__key keyboard__key--dark keyboard__key--wide"><span class="material-icons">check_circle</span></button><button type="button" class="keyboard__key undefined">z</button><button type="button" class="keyboard__key undefined">x</button><button type="button" class="keyboard__key undefined">c</button><button type="button" class="keyboard__key undefined">v</button><button type="button" class="keyboard__key undefined">b</button><button type="button" class="keyboard__key undefined">n</button><button type="button" class="keyboard__key undefined">m</button><button type="button" class="keyboard__key undefined">,</button><button type="button" class="keyboard__key undefined">.</button><button type="button" class="keyboard__key undefined">?</button><br><button type="button" class="keyboard__key keyboard__key--extra--wide undefined"><span class="material-icons">space_bar</span></button></div></div></body></html>
